@@ -1,0 +1,23 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = SpiApp
+  FILE_GUID                      = 12345678-1234-1234-1234-1234567890ab
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 0.1
+  ENTRY_POINT                    = ShellCEntryLib
+
+[Sources]
+  SpiApp.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  UefiLib
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  ShellLib
+  ShellCEntryLib
+  BaseLib
